@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main">
+      <h1>Quiz</h1>
+      <section class="quizz-container">
+        <h2 id="which-question">
+          Question <span id="question-number">1/10</span>
+        </h2>
+        <div class="question-container">
+          <span class="question"></span>
+        </div>
+        <div class="answers-container">
+          <div class="answer-input">
+            <label class="answer">dsada</label>
+            <input class="user-answer" type="checkbox" />
+          </div>
+          <div class="answer-input">
+            <label class="answer">dsada</label>
+            <input class="user-answer" type="checkbox" />
+          </div>
+          <div class="answer-input">
+            <label class="answer">dsada</label>
+            <input class="user-answer" type="checkbox" />
+          </div>
+        </div>
+        <button class="next-btn">Next</button>
+        <button
+          class="next-btn hidden"
+          id="reset-btn"
+          style="margin-top: 100px"
+        >
+          Restart
+        </button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+    <script src="confetti.js"></script>
+  </body>
+</html>

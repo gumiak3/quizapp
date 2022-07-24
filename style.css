@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+:root {
+  --bgColor: #0c2d48;
+  --whiteColor: rgb(255, 255, 255);
+  --greyColor: rgb(128, 128, 128);
+}
+body {
+  background-color: var(--bgColor);
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: var(--whiteColor);
+}
+main {
+  text-align: center;
+  position: relative;
+}
+main h1 {
+  color: var(--whiteColor);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.quizz-container {
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+}
+.quizz-container h2,
+.quizz-container h2 span {
+  color: rgb(169, 169, 169);
+  font-weight: 400;
+}
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  transition: 2s opacity;
+}
+.question-container {
+  margin-top: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.question {
+  transition: 2s opacity;
+}
+.answer-input {
+  border: 1px solid hsl(223, 87%, 63%);
+  margin: 20px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.user-answer {
+  appearance: none;
+  border-radius: 50%;
+  border: 2px solid hsl(223, 87%, 63%);
+  width: 20px;
+  height: 20px;
+  background: var(--bgColor);
+  position: relative;
+}
+.user-answer:hover {
+  cursor: pointer;
+}
+.user-answer::after {
+  display: none;
+}
+.user-answer:checked::after {
+  display: block;
+  content: " ";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: hsl(223, 87%, 63%);
+  position: absolute;
+  left: -1px;
+}
+.next-btn {
+  padding: 10px 40px 10px 40px;
+  border-radius: 50px;
+  background-color: hsl(223, 87%, 63%);
+  border: none;
+  box-shadow: 1px 3px 10px hsl(223, 87%, 60%);
+  margin-top: 20px;
+  position: relative;
+}
+.next-btn:hover {
+  cursor: pointer;
+  background-color: hsl(223, 87%, 70%);
+  bottom: 1px;
+}
+.correct {
+  background-color: green;
+}
+.incorrect {
+  background-color: red;
+}
+.correct > input,
+.incorrect > input {
+  display: none;
+}
+.winner {
+  visibility: hidden;
+}
+.hidden {
+  opcaity: 0;
+  display: none;
+}
+.answer-check {
+  opacity: 0;
+}
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  height: 90vh;
+}
